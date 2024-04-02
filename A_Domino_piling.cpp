@@ -9,11 +9,10 @@ using namespace std;
 
 int main() {
 KemOn09();
-int n;
-cin >> n;
-vector<int> v(n);
+int n , m;
+cin >> n>>m;
 
-
+cout<< (n*m)/2;
 
 
 return 0;
