@@ -20,6 +20,7 @@ for (int i = 0; i < n; i++) {
     } else {
         stk.push(s[i]);
     }
+//test
 }
 
 if (stk.empty()) {
