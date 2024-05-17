@@ -10,30 +10,53 @@ using namespace std;
 int main() {
 KemOn09();
 
-int t;
-    cin >> t;
-
-    while(t--) {
-        int n, k, q;
-        cin >> n >> k >> q;
-
-        vector<int> a(k+1), b(k+1), speed(k+1), prefix(k+1);
-        for(int i = 1; i <= k; i++) cin >> a[i];
-        for(int i = 1; i <= k; i++) cin >> b[i];
-
-        for(int i = 1; i <= k; i++) speed[i] = (b[i] - b[i-1]) / (a[i] - a[i-1]);
-        for(int i = 1; i <= k; i++) prefix[i] = prefix[i-1] + (a[i] - a[i-1]) * speed[i];
-
-        while(q--) {
-            int d;
-            cin >> d;
-
-            int idx = upper_bound(all(a), d) - a.begin() - 1;
-            int time = prefix[idx] + (d - a[idx]) * speed[idx];
-
-            cout << time << "\n";
-        }
+ll t;
+  cin>> t;
+ 
+  while(t--){
+    ll n, k, q;
+    cin>> n>> k>>q;
+ 
+    vector <double> distance, time, speed;
+    distance.push_back(0);
+    time.push_back(0);
+     
+    for (int i=0 ;i<k; i++){
+      ll d;
+      cin>> d;
+      distance.push_back(d);
     }
-    
+        for (int i=0 ;i<k; i++){
+            int d;
+            cin>> d;
+            time.push_back(d);
+            }
+        
+    for (int i=1 ;i<=k; i++){
+      if(time[i] != time[i-1]) {
+        double speed1= (distance[i] - distance[i-1]) / (time[i] - time[i-1]);
+        speed.push_back (speed1);
+      }
+    }
+ 
+    while( q-- ){
+      ll x;
+      cin>> x;
+      double ans=0;
+        for( ll i=1; i< distance.size() ;i++ ){
+                if( distance[i]<= x ){
+                ans+= (distance[i] - distance[i-1])/ speed[i-1];
+                }
+                else {
+                ans+= (x - distance[i-1])/ speed[i-1];
+                break;
+                }
+            }
+            cout<< (ll) floor (ans)<<" ";
+            }
+            cout<<endl;
+        }
+
+
 return 0;
 }
