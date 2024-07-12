@@ -19,6 +19,7 @@ for (size_t i = 0; i < n; i++)
     cin >> vv[i].second >> vv[i].first;
 }
 
+
 sort(vv.rbegin(),vv.rend());
 
 for (size_t i = 0; i < n; i++)
