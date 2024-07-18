@@ -30,7 +30,7 @@ while (n--)
     cout << s + to_string(mp[s] - 1) << endl;
     c++;
    }else{
-    cout<<"OK"<<endl;
+      cout<<"OK"<<endl;
    }
 
    
