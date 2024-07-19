@@ -26,14 +26,25 @@ cin >> t;
 while(t--){
     ll n, m;
     cin >> n >> m;
-    ll sum = (n * (n + 1)) / 2;
-    ll power = 1;
-    while(power <= n){
-        sum -= power;
-        if(power > LLONG_MAX / m) break;
-        power *= m;
+    ll sum = 0;
+    
+    for (int i = 1; i <= n; i++)
+    {
+        
+        if (i % m == 0 || i == 1)
+        {
+            sum -= i;
+        }else
+        {
+            sum += i;
+        }
+        
+        cout<<sum<<" ";
+
+        
     }
-    cout << sum << '\n';
+    
+    cout<<sum<<"\n";
 }
 
 
