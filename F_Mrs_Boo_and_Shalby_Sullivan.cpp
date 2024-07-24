@@ -17,13 +17,13 @@ string x;
 
     for (size_t i = 0; i < x.size(); i++) {
         int digit = x[i] - '0';
-        int inverted_digit = 9 - digit;
-        if (inverted_digit < digit) {
+        int id = 9 - digit;
+        if (id < digit) {
 
-            if (i == 0 && inverted_digit == 0) {
+            if (i == 0 && id == 0) {
                 continue;
             }
-            x[i] = inverted_digit + '0';
+            x[i] = id + '0';
         }
     }
 
