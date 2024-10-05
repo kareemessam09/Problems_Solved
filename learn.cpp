@@ -1,29 +1,19 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
+ 
 using namespace std;
-#define ll long long
-#define mx 100000
+using ll = long long;
+#define nl "\n"
 #define all(x) (x).begin(), (x).end()
-#define isEven(n) (n % 2 ==0)
+#define rall(x) (x).rbegin(), (x).rend()
+#define pb push_back
 
 int main() {
 
 ios_base::sync_with_stdio(false);
-cin.tie(0);
-cout.tie(0);
+cin.tie(nullptr), cout.tie(nullptr);
 
 int n;
 cin >> n;
-
-string s;
-
-cout<<"fvs";
-
-
-
-
-
-
 
 
 
