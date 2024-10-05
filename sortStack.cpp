@@ -31,7 +31,7 @@ for (size_t i = 0; i < n; i++)
     {
         st.pop();
     }
-    if (!st.top().empty())
+    if (!st.empty())
     {
         res[i] = st.top();
     }
@@ -40,9 +40,15 @@ for (size_t i = 0; i < n; i++)
         res[i] = -1;
     }
     
-    
+    st.push(arr[i]);
     
 }
+
+for (size_t i = 0; i < n; i++)
+{
+    cout<<res[i]<<" ";
+}
+
 
 
 
