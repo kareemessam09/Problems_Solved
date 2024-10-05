@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
- 
+#include <bits/stdc++.h>
+
 using namespace std;
 #define ll long long
 #define mx 100000
@@ -16,6 +16,10 @@ int n;
 cin >> n;
 
 string s;
+
+cout<<"fvs";
+
+
 
 
 
