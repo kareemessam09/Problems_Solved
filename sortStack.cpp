@@ -29,7 +29,7 @@ sta
 for (size_t i = 0; i < n; i++)
 {
     
-    while (!st.empty() && st.top() < arr[i])
+    while (!st.empty() && st.top() >= arr[i])
     {
         st.pop();
     }
