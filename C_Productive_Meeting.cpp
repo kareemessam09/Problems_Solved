@@ -58,15 +58,9 @@ void solve(){
             for(auto talk:talks){
                 cout<<talk.first<<" "<<talk.second<<nl;
             }
-            
-        
         }
-    
     }
-    
-
 }
-
 
 
 int main() {
