@@ -18,8 +18,8 @@ cin.tie(nullptr), cout.tie(nullptr);
 string s;
 cin>>s;
 
-int low[26] = {0};
-int high[26] = {0};
+int low[30] = {0};
+int high[30] = {0};
 
 
 for (size_t i = 0; i < s.size(); i++)
@@ -33,20 +33,19 @@ for (size_t i = 0; i < s.size(); i++)
         low[s[i] - 'a']++;
     }
     
- 
 }
 
 
-for (size_t i = 0; i < 26; i++)
+for (size_t i = 0; i < 30; i++)
 {
-    if(high[i] > 0)   cout << char(i + 'A') << ": " << high[i] << nl;
+    if(high[i] > 0)   cout << char(i + 'A') << " " << high[i] << nl;
 
 }
 
 
-for (size_t i = 0; i < 26; i++)
+for (size_t i = 0; i < 30; i++)
 {
-    if(low[i] > 0)   cout << char(i + 'a') << ": " << low[i] << nl;
+    if(low[i] > 0)   cout << char(i + 'a') << " " << low[i] << nl;
 
 }
 
