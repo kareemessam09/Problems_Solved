@@ -8,7 +8,7 @@ using ll = long long;
 #define pb push_back
 
 struct ss{
-    pair<string,int> p;
+    pair<string,ll> p;
 };
 bool compare(const ss &g1, const ss &g2) {
 
@@ -29,17 +29,17 @@ cin.tie(nullptr), cout.tie(nullptr);
 int n;
 cin >> n;
 
-vector<ss> v(7);
+vector<ss> v(n);
 
 
-for (size_t i = 0; i < n; i++)
+for (ll i = 0; i < n; i++)
 {
     cin>>v[i].p.first >> v[i].p.second;
 }
 
 sort(all(v) , compare);
 
-for (size_t i = 0; i < n; i++)
+for (ll i = 0; i < n; i++)
 {
     cout<<v[i].p.first <<" "<< v[i].p.second<<nl;
 }
