@@ -7,22 +7,23 @@ using namespace std;
 #define isEven(n) (n % 2 ==0)
 
 
-vector<int> twoSum(vector<int>& nums, int target) {
+bool isPalindrome(int x) {
+    string s = to_string(x);
+    int l = 0;
+    int r = s.length()-1;
 
-    unordered_map<int, int> seen;
-
-    for(int i = 0; i<nums.size() ; i++){
-        int comp = target - nums[i];
-
-        if(seen.find(comp) != seen.end()){
-            return {seen[comp] , i};
+    while(l <= r){
+        if(s[l] != s[r]){
+            return false;
         }
 
-        seen[nums[i]] = i ;
-
+        l++;
+        r--;
     }
+    
 
-    return {};
+    return true;
+    
 }
 
 int main() {
@@ -31,12 +32,8 @@ ios_base::sync_with_stdio(false);
 cin.tie(0);
 cout.tie(0);
 
-vector<int> nums = {3,2,4};
-int targt = 6;
+cout<<isPalindrome(121);
 
-
-vector<int>vv = twoSum(nums,targt);
-cout<< vv[0] <<vv[1];
 
 
 
