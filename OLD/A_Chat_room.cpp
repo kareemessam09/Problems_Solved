@@ -7,6 +7,7 @@ using ll = long long;
 #define rall(x) (x).rbegin(), (x).rend()
 #define pb push_back
 
+
 int main() {
 
 ios_base::sync_with_stdio(false);
@@ -23,17 +24,20 @@ for (size_t i = 0; i < s.size(); i++)
     if (s[i] == an[st])
     {
         st++;
+
     }
     
 }
 
 if (st == an.size())
 {
-    cout<<"YES";
+    cout<<"YES" <<nl;
 }else
 {
     cout<<"NO";
 }
+
+
 
 
 
